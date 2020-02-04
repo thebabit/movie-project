@@ -5,23 +5,23 @@ public class RequestViewHelper {
     public static String process(String uri) {
 
         switch (uri) {
-            case "/project1/login.view":
+            case "/movie/login.view":
                 return "partials/login.html";
-            case "/project1/register.view":
+            case "/movie/register.view":
                 return "partials/register.html";
-            case "/project1/login/dashboard":
+            case "/movie/login/dashboard":
                 return "partials/dashboard.html";
-            case "/project1/home.view":
+            case "/movie/home.view":
                 return "partials/home.html";
-            case "/project1/registerSuccess.view":
+            case "/movie/registerSuccess.view":
                 return "partials/registerSuccess.html";
-            case "/project1/employee.view":
+            case "/movie/employee.view":
                 return "partials/employee.html";
-            case "/project1/manager.view":
+            case "/movie/manager.view":
                 return "partials/manager.html";
-            case "/project1/createReimb.view":
+            case "/movie/createReimb.view":
                 return "partials/createReimb.html";
-            case "/project1/update.view":
+            case "/movie/update.view":
                 return "partials/update.html";
 
             default:
