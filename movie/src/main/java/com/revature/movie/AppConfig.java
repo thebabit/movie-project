@@ -43,10 +43,10 @@ public class AppConfig implements WebMvcConfigurer, WebApplicationInitializer {
     @Bean
     public BasicDataSource dataSource() {
         BasicDataSource dataSource = new BasicDataSource();
-        dataSource.setDriverClassName(dbDriver);
-        dataSource.setUrl(dbUrl);
-        dataSource.setUsername(dbUsername);
-        dataSource.setPassword(dbPassword);
+        dataSource.setDriverClassName("oracle.jdbc.driver.OracleDriver");
+        dataSource.setUrl("jdbc:oracle:thin:@java-usf-191216.cmd7bslj6nas.us-east-2.rds.amazonaws.com:1521:ORCL");
+        dataSource.setUsername("movie1");
+        dataSource.setPassword("pass");
         return dataSource;
     }
 
