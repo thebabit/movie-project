@@ -134,7 +134,7 @@
                     <configuration>
                         <url>http://localhost:8080/manager/text</url>
                         <server>LocalTomcat</server>
-                        <path>/movie</path>
+                        <path>/hoang123</path>
                         <update>true</update>
                     </configuration>
                 </plugin>
