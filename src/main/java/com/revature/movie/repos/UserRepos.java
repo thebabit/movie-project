@@ -150,6 +150,40 @@ public class UserRepos implements CrudRepository {
         }
     }
 
+
+    public User findByUsername(String username){
+        User u = new User();
+
+        try {
+
+            Session session = sessionFactory.getCurrentSession();
+            CriteriaBuilder queryBuilder = session.getCriteriaBuilder();
+
+
+            CriteriaQuery<User> critQuery = queryBuilder.createQuery(User.class);
+
+
+            Root<User> queryRoot = critQuery.from(User.class);
+
+
+            critQuery.select(queryRoot);
+
+
+            critQuery.where(
+                    queryBuilder.equal(queryRoot.get("username"), username)
+            );
+
+            List<User> userList = session.createQuery(critQuery).getResultList();
+            u = userList.get(0);
+            return u;
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return u;
+    }
+
     public User unblock(String username) {
 
         User u = new User();

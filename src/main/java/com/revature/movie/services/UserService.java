@@ -76,6 +76,13 @@ public class UserService {
     }
 
     @Transactional
+    public User findByUsername(String username) {
+
+        return userRepo.findByUsername(username);
+
+    }
+
+    @Transactional
     public void deleteUser(String username) {
 
          userRepo.deleteUser(username);
